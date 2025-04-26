@@ -47,3 +47,12 @@ With the exception of the first layer, we use constant expansion rate throughout
 ## Training the model
 
 MobileNetV2 is trained on ImageNet data. ImageNet is an extensive image dataset project widely used in the field of machine learning. It contains a large collection of images across various categories, which can be used to teach networks to recognize and classify objects. MobileNetV2 is trained on 1,000 categories.
+
+## Transfer learning and fine-tuning
+
+The intuition behind transfer learning for image classification is that if a model is trained on a large and general enough dataset, this model will effectively serve as a generic model of the visual world. You can then take advantage of these learned feature maps without having to start from scratch by training a large model on a large dataset.
+
+In this notebook, you will try two ways to customize a pretrained model:
+- Feature Extraction: Use the representations learned by a previous network to extract meaningful features from new samples. You simply add a new classifier, which will be trained from scratch, on top of the pretrained model so that you can repurpose the feature maps learned previously for the dataset. You do not need to (re)train the entire model. The base convolutional network already contains features that are generically useful for classifying pictures. However, the final, classification part of the pretrained model is specific to the original classification task, and subsequently specific to the set of classes on which the model was trained.
+- Fine-Tuning: Unfreeze a few of the top layers of a frozen model base and jointly train both the newly-added classifier layers and the last layers of the base model. This allows us to "fine-tune" the higher-order feature representations in the base model in order to make them more relevant for the specific task.
+
