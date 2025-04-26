@@ -5,6 +5,7 @@ Sources:
 - https://arxiv.org/pdf/1801.04381
 - https://medium.com/@luis_gonzales/a-look-at-mobilenetv2-inverted-residuals-and-linear-bottlenecks-d49f85c12423
 - https://medium.com/@alfred.weirich/finetuning-tensorflow-keras-networks-basics-using-mobilenetv2-as-an-example-8274859dc232
+- https://www.tensorflow.org/tutorials/images/transfer_learning
 
 ## Overview of Standard 2D Convolution
 
