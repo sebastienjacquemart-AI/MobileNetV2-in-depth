@@ -1,6 +1,9 @@
 # MobileNetV2-in-depth
 
-Based on the following paper: https://arxiv.org/pdf/1801.04381 and https://medium.com/@luis_gonzales/a-look-at-mobilenetv2-inverted-residuals-and-linear-bottlenecks-d49f85c12423
+Sources:
+https://arxiv.org/pdf/1801.04381 
+https://medium.com/@luis_gonzales/a-look-at-mobilenetv2-inverted-residuals-and-linear-bottlenecks-d49f85c12423
+https://medium.com/@alfred.weirich/finetuning-tensorflow-keras-networks-basics-using-mobilenetv2-as-an-example-8274859dc232
 
 ## Overview of Standard 2D Convolution
 
@@ -39,3 +42,7 @@ The layer takes in a low-dimensional tensor with k channels and performs three s
 Now we describe our architecture in detail. As discussed in the previous section the basic building block is a bottleneck depth-separable convolution with residuals. The architecture of MobileNetV2 contains the initial fully convolution layer with 32 filters, followed by 19 residual bottleneck layers. We use ReLU6 as the non-linearity because of its robustness when used with low-precision computation. We always use kernel size 3 3 as is standard for modern networks, and utilize dropout and batch normalization during training. 
 
 With the exception of the first layer, we use constant expansion rate throughout the network. In our experiments we find that expansion rates between 5 and 10 result in nearly identical performance curves, with smaller networks being better off with slightly smaller expansion rates and larger networks having slightly better performance with larger expansion rates.
+
+## Training the model
+
+MobileNetV2 is trained on ImageNet data. ImageNet is an extensive image dataset project widely used in the field of machine learning. It contains a large collection of images across various categories, which can be used to teach networks to recognize and classify objects. MobileNetV2 is trained on 1,000 categories.
