@@ -24,6 +24,7 @@ In deep neural networks, the activations at each layer (the output tensors) can 
 The important information across these activations forms a manifold of interest — a structured set of points — that often lies inside a low-dimensional subspace even if the full space has many channels. Earlier models like MobileNetV1 exploited this by reducing the number of channels (using a width multiplier) to make networks smaller and faster, assuming the information could still fit. However, this simple idea doesn't fully hold because real networks have non-linearities like ReLU, which:
 - Keep the data linear where activations stay positive (alive),
 - But destroy information when they zero out (kill) channels.
+
 Thus, ReLU can preserve information only if the manifold already fits tightly inside a low-dimensional space. If not, ReLU might destroy critical information, especially in narrow layers where every channel matters. MobileNetV2 solves this by using linear bottlenecks:
 - Narrow layers without ReLU, which compress features without risking information loss.
 - This protects the manifold structure and keeps the network both efficient and accurate.
