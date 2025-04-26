@@ -1,6 +1,6 @@
 # MobileNetV2-in-depth
 
-Based on the following paper: https://arxiv.org/pdf/1801.04381
+Based on the following paper: https://arxiv.org/pdf/1801.04381 and https://medium.com/@luis_gonzales/a-look-at-mobilenetv2-inverted-residuals-and-linear-bottlenecks-d49f85c12423
 
 ## Overview of Standard 2D Convolution
 
