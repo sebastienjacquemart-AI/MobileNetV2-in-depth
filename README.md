@@ -82,5 +82,9 @@ When you don't have a large image dataset, it's a good practice to artificially 
 
 This model expects pixel values in [-1, 1], but at this point, the pixel values in your images are in [0, 255]
 
+## Evaluation
+
+True positive: predicted = positive and actual = positive. True negative: predicted = negative and actual = negative. False positive: predicted = positive and actual = negative. False negative: predicted = negative and actual = positive. Accuracy (TP+TN/(TP+TN+FP+FN)): Measures the percentage of correctly classified samples; F1 Score: A balance between precision and recall, useful when dealing with imbalanced classes; Precision (TP/(TP+FP)): Measures how many of the predicted positive samples are actually positive; Recall (TP/(TP+FN)): Measures how many of the actual positive samples were correctly identified by the model. In most real-life classification problems, imbalanced class distribution exists and thus F1-score is a better metric to evaluate our model on.
+
 
 
