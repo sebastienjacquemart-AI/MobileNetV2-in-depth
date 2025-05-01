@@ -7,6 +7,16 @@ Sources:
 - https://medium.com/@alfred.weirich/finetuning-tensorflow-keras-networks-basics-using-mobilenetv2-as-an-example-8274859dc232
 - https://www.tensorflow.org/tutorials/images/transfer_learning
 
+## Overview of Convolution operation 
+
+Convolution of two variables explained
+
+convolution of two functions explained (moving average)
+
+convolution operation in image processing (kernel, choose different kernel, get different image processsing effects such as edge detection, blurring..)
+
+convolution operation in neural networks (use data to decide what the kernels should look like)
+
 ## Overview of Standard 2D Convolution
 
 Before diving into the mechanics of the depth-wise separable convolution, let’s review the standard 2D convolution. Suppose a convolution operation transforms an input volume of dimensions Dᵤ x Dᵤ x M to an output volume of dimensions Dᵥ x Dᵥ x N, as shown in Fig. 1(a). Specifically, we require N filters, each of dimension Dᵣ x Dᵣ x M, as shown in Fig. 1(b). 
